@@ -2,7 +2,7 @@
 
 ESPHome firmware for the **M5Stack Atom Echo S3R** (ESP32-S3) as a Home Assistant voice satellite.
 
-Extends [M5Stack’s official satellite package](https://github.com/m5stack/esphome-yaml/blob/main/common/atom-echos3r-satellite-base.yaml) with:
+Based on [M5Stack’s official satellite YAML](https://github.com/m5stack/esphome-yaml/blob/main/common/atom-echos3r-satellite-base.yaml) (vendored into `atom-echos3r-voice.yaml`) with:
 
 - **Alexa** on-device wake word (`id: alexa`) as the default, plus **Okay Nabu** and **Hey Jarvis**
 - **Button-to-talk** on the top button (GPIO41): short press starts/stops Assist; hold 10s factory reset
@@ -44,7 +44,7 @@ OTA manifest: `https://dflourusso.github.io/atom-echos3r-voice/firmware/manifest
 
 ```
 atom-echos3r-voice/
-├── atom-echos3r-voice.yaml          # Core (M5Stack package + Alexa + button)
+├── atom-echos3r-voice.yaml          # Core (vendored M5Stack base + Alexa + button)
 ├── atom-echos3r-voice.factory.yaml  # Distribution (HTTP OTA + update entity)
 ├── atom-echos3r-voice.dev.yaml      # Local Wi-Fi from secrets
 ├── secrets.template.yaml
