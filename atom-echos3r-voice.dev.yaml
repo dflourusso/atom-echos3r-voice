@@ -1,0 +1,6 @@
+packages:
+  core: !include atom-echos3r-voice.yaml
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
